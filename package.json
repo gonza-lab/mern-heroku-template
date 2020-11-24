@@ -1,0 +1,37 @@
+{
+  "name": "react-node-heroku",
+  "version": "1.0.0",
+  "description": "Template of a project with react and node",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node server",
+    "build": "cd react-ui/ && npm install && npm run build",
+    "dev-server": "nodemon server",
+    "dev-react": "cd react-ui/ && npm start"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "cli-color": "^2.0.0",
+    "morgan": "^1.10.0"
+  }
+}
