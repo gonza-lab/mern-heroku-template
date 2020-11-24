@@ -5,10 +5,11 @@ const morgan = require('morgan');
 const cors = require('cors');
 const { dbConnection } = require('./database/config');
 
+require('dotenv').config();
+
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
 
-require('dotenv').config();
 
 const app = express();
 dbConnection();
@@ -45,5 +46,5 @@ app.listen(PORT, () => {
   }
 
   console.log('Server Online');
-  console.log(`Puerto ${process.env.PORT || '8080'}`);
+  console.log(`Puerto ${PORT}`);
 });
